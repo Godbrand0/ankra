@@ -23,9 +23,10 @@ main{
 }
 nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     margin: 20px 30px;
+    
 }
 h1{
     font-size: 40px;
@@ -60,7 +61,7 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
 }
 .icon-1{
     width: 30px;
@@ -526,12 +527,16 @@ a.google:hover{
     }
     
     .texts-7{
-        display: block;
-        margin-right: -650px;
-        margin-top: 100px;
+        display: none;
+        position: relative;
+        right: -300px;
+        top: 80px;
+        height: 160px;
     }
     .text-17{
         
+    
+
     }
     footer{
         display: block;
