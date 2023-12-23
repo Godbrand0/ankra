@@ -75,6 +75,7 @@ a{
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
+    text-transform: capitalize;
 }
 .image-1{
     width: 100%;
@@ -533,11 +534,7 @@ a.google:hover{
         top: 80px;
         height: 160px;
     }
-    .text-17{
-        
     
-
-    }
     footer{
         display: block;
     }

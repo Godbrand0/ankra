@@ -4,22 +4,47 @@ const pwShowHide = document.querySelectorAll('.eye-icon');
 const container = document.querySelector('.container');
 const main = document.querySelector('.main');
 const button = document.querySelector('.text-1');
-const button_2 = document.querySelector('button');
+let button_2 = document.querySelector('.button');
 const button_3 = document.querySelectorAll('.icon-3');
+let username = document.getElementById('username');
 
 
 
+function fun1() {
+    button.innerHTML = username.value;
+}; 
 
 
-button_2.addEventListener("click", function(){
-    container.style.display ="none";
-    main.style.display ="block";
-} )
+// Initially disable the button
+button_2.disabled = true;
 
-button.addEventListener("click", function(){
-    main.style.display ="none";
-    container.style.display ="block";
-} )
+// Add an input event listener to the username input field
+username.addEventListener('input', function() {
+   // Check if the username value is not empty
+   if (username.value.trim() !== '') {
+      // If the username is not empty, enable the button
+      button_2.disabled = false;
+   } else {
+      // If the username is empty, disable the button
+      button_2.disabled = true;
+   }
+});
+
+// Add a click event listener to button_2
+button_2.addEventListener('click', function() {
+   // Check if button_2 is disabled
+   if (button_2.disabled) {
+      // If button_2 is disabled, display the container and hide the main
+      container.style.display = "block";
+      main.style.display = "none";
+   } else {
+      // If button_2 is not disabled, hide the container and display the main
+      container.style.display = "none";
+      main.style.display = "block";
+   }
+   fun1()
+});
+
 
 burger.addEventListener("click", function(){
 if (nav.style.display =='block') {
