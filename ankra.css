@@ -432,7 +432,7 @@ input:is(:focus, :valid)~ label{
 }
 .button{
     padding: 10px 20px;
-    width: 280px;
+    width: 100%;
     
     margin-top: 20px;
     border-radius: 10px;
@@ -458,7 +458,7 @@ a.facebook{
     background: var(--norma);
     padding: 10px 20px;
     border-radius: 10px;
-    width: 280px;
+    width: 100%;
     text-decoration: none;
     cursor: pointer;
     margin-top: 30px;
@@ -490,7 +490,7 @@ a.google{
     border: 1px solid #cacaca;
     padding: 10px 20px;
     background: wheat;
-    width: 280px;
+    width: 100%;
     border-radius: 10px;
     text-decoration: none;
     cursor: pointer;
