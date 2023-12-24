@@ -7,7 +7,7 @@ const button = document.querySelector('.text-1');
 let button_2 = document.querySelector('.button');
 const button_3 = document.querySelectorAll('.icon-3');
 let username = document.getElementById('username');
-
+var pass = document.getElementById('pass');
 
 
 function fun1() {
@@ -20,8 +20,10 @@ button_2.disabled = true;
 
 // Add an input event listener to the username input field
 username.addEventListener('input', function() {
+
+   
    // Check if the username value is not empty
-   if (username.value.trim() !== '') {
+   if (username.value !== '' && pass.value !== '' ) {
       // If the username is not empty, enable the button
       button_2.disabled = false;
    } else {
@@ -33,7 +35,7 @@ username.addEventListener('input', function() {
 // Add a click event listener to button_2
 button_2.addEventListener('click', function() {
    // Check if button_2 is disabled
-   if (button_2.disabled) {
+   if (button_2.disabled ) {
       // If button_2 is disabled, display the container and hide the main
       container.style.display = "block";
       main.style.display = "none";
@@ -46,11 +48,24 @@ button_2.addEventListener('click', function() {
 });
 
 
+function validate_password() {
+    var pass = document.getElementById('pass').value;
+    var confirm_pass = document.getElementById('confirm_pass').value;
+    if (pass!= confirm_pass) {
+        button_2.disabled = true;
+    } else {
+        button_2.disabled = false;
+    }
+}
+
+
 burger.addEventListener("click", function(){
 if (nav.style.display =='block') {
     nav.style.display = 'none';
+    main.style.transform = 'translateX(0px)';
 } else {
-    nav.style.display = '';
+    nav.style.display = 'block';
+    main.style.transform = 'translateX(-100px)';
 }
 })
 

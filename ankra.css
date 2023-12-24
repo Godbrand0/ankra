@@ -38,7 +38,7 @@ nav{
     justify-content: center;
     align-items: center;
     list-style: none;
-    margin-top: 10px;
+   
 }
 .text-17{
     text-decoration: none;
@@ -46,18 +46,15 @@ nav{
     font-size: 15px;
     font-weight: bold;
     margin-right: 30px;
-}
-.text-17{
     cursor: pointer;
     transition: all 0.5s;
     padding-bottom: 5px;
 }
+
 .text-17:hover{
     border-bottom: 3px solid var(--light-color);
 }
-a{
-    margin-left: 20px;
-}
+
 .icons{
     display: flex;
     justify-content: space-between;
@@ -161,6 +158,7 @@ a{
     padding-top: 13%;
     position: relative;
     top: -405px;
+    
     
 }
 .text-4{
@@ -434,6 +432,8 @@ input:is(:focus, :valid)~ label{
 }
 .button{
     padding: 10px 20px;
+    width: 280px;
+    margin-left: 20px;
     margin-top: 20px;
     border-radius: 10px;
     border: none;
@@ -521,19 +521,22 @@ a.google:hover{
 .eye-icon:hover{
     opacity: 1;
 }
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 900px) {
     .grid{
         grid-template-columns: repeat(2, 250px);
         grid-column-gap: 30px;
         margin-left: 0px;
     }
-    
+    .main{
+        transition: all 0.5s;
+    }
     .texts-7{
-        display: none;
-        position: relative;
-        right: -300px;
-        top: 80px;
-        height: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    a{
+        margin-left: 10px;
     }
     
     footer{
@@ -551,16 +554,17 @@ a.google:hover{
     .texts-6{
         margin-top: 40px;
     }
-    .icon{
-        display: block;
-    }
+    
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 700px) {
     .grid{
-        grid-template-columns: repeat(2, 150px);
+        grid-template-columns: repeat(1, 300px);
         grid-column-gap: 20px;
         margin-left: -10px;
+    }
+    .icon{
+        display: block;
     }
     .section-3{
         display: block;
@@ -568,22 +572,47 @@ a.google:hover{
     .section-2{
         margin: 350px 10px;
     }
+    .section-1{
+        display: block;
+    }
+    .texts-7{
+        display: none;
+        position: absolute;
+        right: -100px;
+        top: 5px;
+        height: 200px;
+       
+        background: white;
+    }
+    li{
+        
+        margin-top: 20px;
+        padding-left: 5px;
+        
+    }
     .item{
-        width: 150px;
+        width: 300px;
         height: 350px;
     }
     .image-5{
-        width: 130px;
+        width: 280px;
         height: 250px;
     }
     .text-8{
         font-size: 15px;
     }
     .icon-3{
-        left: 100px;
+        left: 245px;
     }
     .images-1{
-        display: block;
+        display: flex;
+    }
+    .images{
+        width: 320px;
+        margin-top: 10px;
+    }
+    .price{
+        justify-content: space-between;
     }
     .texts-1{
         margin-top: 30px;
@@ -591,8 +620,11 @@ a.google:hover{
     #body{
         padding: 0px;
     }
-    .image-3,.image-4{
+    .image-2{
         width: 100%;
+    }
+    .image-3,.image-4{
+        width: 50%;
         height: 130px;
     }
 }
