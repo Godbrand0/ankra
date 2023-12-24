@@ -433,7 +433,7 @@ input:is(:focus, :valid)~ label{
 .button{
     padding: 10px 20px;
     width: 280px;
-    margin-left: 20px;
+    
     margin-top: 20px;
     border-radius: 10px;
     border: none;
