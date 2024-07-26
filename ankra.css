@@ -515,21 +515,21 @@ a.google:hover {
 
 .side-bar {
   height: 100%;
-  width: 400px;
+  width: 100%;
   position: fixed;
   z-index: 1;
   top: 0;
-  left: 0;
+  left: -100%;
   background-color: whitesmoke;
   overflow-x: hidden;
   padding-top: 20px;
   display: flex;
   justify-content: space-around;
-
+  flex-direction: row-reverse;
   transition: 350ms;
   list-style: none;
 }
-.side-bar.active {
+.act {
   left: 0;
   transition: 350ms;
 }
@@ -543,6 +543,17 @@ ul {
   font-weight: 600;
   text-decoration: none;
   margin-top: 20px;
+  cursor: pointer;
+}
+.text-30:hover {
+  color: whitesmoke;
+  width: 100%;
+  background-color: var(--light-color);
+}
+.image-10 {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
 }
 @media screen and (max-width: 900px) {
   .grid {

@@ -1,4 +1,4 @@
-var burger = document.querySelector(".icon");
+const burger = document.querySelector(".icon");
 var side_bar = document.querySelector(".side-bar");
 const pwShowHide = document.querySelectorAll(".eye-icon");
 const container = document.querySelector(".container");
@@ -8,6 +8,7 @@ let button_2 = document.querySelector(".button");
 const button_3 = document.querySelectorAll(".icon-3");
 let username = document.getElementById("username");
 var pass = document.getElementById("pass");
+const close_btn = document.querySelector(".image-10");
 
 function fun1() {
   button.innerHTML = username.value;
@@ -54,9 +55,11 @@ function validate_password() {
 }
 
 //menu
+close_btn.addEventListener("click", function () {
+  side_bar.classList.remove("act");
+});
 burger.addEventListener("click", function () {
-  if (side_bar.classList.contains(".active")) {
-  }
+  side_bar.classList.add("act");
 });
 
 pwShowHide.forEach((eyeIcon) => {
